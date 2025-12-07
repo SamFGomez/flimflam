@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import '../css/style.css';
+
 
 class RunCentral extends Component {
   render() {

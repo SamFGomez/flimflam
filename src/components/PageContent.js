@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import '../css/style.css';
+
 import ToDo from './ToDo.js'; 
 import WeatherCentral from './WeatherCentral.js'; 
 import RunCentral from './RunCentral.js'; 

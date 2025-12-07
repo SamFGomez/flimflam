@@ -1,5 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
+import './css/style.css';
+
 import PageHeader from './components/PageHeader.js';
 import PageContent from './components/PageContent.js';
 

@@ -1,5 +1,4 @@
 import { Component } from 'react';
-import '../css/style.css';
 
 class PageHeader extends Component {
   render() {

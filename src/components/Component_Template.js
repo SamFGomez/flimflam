@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import '../css/style.css';
+
 
 //Replace Component Name with your component's name
 //Update your content inside the render() return block
