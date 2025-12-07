@@ -1,0 +1,16 @@
+.defaultContainer {
+    width: 100%;
+    text-align: left;
+}
+.PageContentColumn {
+    margin-left: 50px
+}
+.PageContent{
+    width: 100%;
+    text-align: center;
+    display: flex;
+}
+.PageHeader {
+    width: 100%;
+    text-align: center;
+}
