@@ -10,7 +10,7 @@ body {
     margin: 0 25px;
 }
 .PageContent{
-    margin: 0 auto;
+    padding: 30px;
     text-align: center;
     display: flex;
     justify-content: center;

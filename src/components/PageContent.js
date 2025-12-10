@@ -8,11 +8,11 @@ import RunCentral from './RunCentral.js';
 class PageContent extends Component {
   render() {
     return (
-      <div class="PageContent">
-        <div class="PageContentColumn">
+      <div className="PageContent">
+        <div className="PageContentColumn">
           <ToDo />
         </div>
-        <div class="PageContentColumn">
+        <div className="PageContentColumn">
           <WeatherCentral />
           <RunCentral />
         </div>
