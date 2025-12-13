@@ -44,6 +44,7 @@ p{
     max-height:630px;
     overflow-y:scroll;
     justify-content: center;
+    text-align: center;
 }
 .ActivityChoice {
     border: 2px solid rgb(244, 127, 37);
@@ -53,11 +54,18 @@ p{
     border-radius: 20px; 
     padding: 5px 15px;
     display:flex;
-    margin:10px auto;
+    margin:5px auto;
+}
+
+.ActivityChoiceButton{
+    background:none;
+    border:none;
+    padding:0;
+    margin:0;
 }
 
 .ActivityChoice:hover{
-    border: 6px solid rgb(244, 127, 37);
+    border: 3px solid rgb(244, 127, 37);
     background: #3a5d40;
     color:white;
 }
@@ -72,15 +80,17 @@ p{
     align-self:center;
     font-weight: 250;
     font-size:15px;
-    margin: 0 20px
+    margin: 0 20px;
+    text-align: left;
 }
 
 .ActivityChoiceTitle{
     margin: 0;
-    font-size:25px;
+    font-size:20px;
     font-weight:700;
     align-self:center;
     width:40%;
+    text-align: left;;
 }
 
 .ActivityChoiceDescription {
