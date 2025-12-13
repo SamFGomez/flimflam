@@ -1,12 +1,21 @@
 body { 
-    background: rgb(113, 154, 118)
+    color:black;
+    background: rgb(140, 137, 137);
+}
+
+p{
+    margin: 0;
 }
 
 .defaultContainer {
     width: 100%;
     text-align: left;
+    border:rgb(244, 127, 37) 4px solid;
+    border-radius: 15px;
+    background:#dddedd
 }
 .PageContentColumn {
+    width:100%;
     margin: 0 25px;
 }
 .PageContent{
@@ -14,12 +23,66 @@ body {
     text-align: center;
     display: flex;
     justify-content: center;
-    background:white;
 }
 .PageHeader {
     width: 100%;
     text-align: center;
 }
+
+.ComponentTitle {
+    font-size: 32px;
+    margin: 0 auto;
+    text-align: center;
+}
+
 .bulletContainer{
+    display:flex;
+}
+
+.ActivityChoicesCointainer {
+    margin-top: 20px;
+    max-height:630px;
+    overflow-y:scroll;
+    justify-content: center;
+}
+.ActivityChoice {
+    border: 2px solid rgb(244, 127, 37);
+    background: #5a8963;
+    width:400px;
+    height:70px;
+    border-radius: 20px; 
+    padding: 5px 15px;
+    display:flex;
+    margin:10px auto;
+}
+
+.ActivityChoice:hover{
+    border: 6px solid rgb(244, 127, 37);
+    background: #3a5d40;
+    color:white;
+}
+
+.ActivityChoice img{
+    align-self:center;
+    height: 30px;
+    padding-right: 15px;
+}
+
+.ActivityChoiceTextContainer {
+    align-self:center;
+    font-weight: 250;
+    font-size:15px;
+    margin: 0 20px
+}
+
+.ActivityChoiceTitle{
+    margin: 0;
+    font-size:25px;
+    font-weight:700;
+    align-self:center;
+    width:40%;
+}
+
+.ActivityChoiceDescription {
     display:flex;
 }

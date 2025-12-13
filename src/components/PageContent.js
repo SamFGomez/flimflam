@@ -1,8 +1,7 @@
 import { Component } from 'react';
 
 import ToDo from './ToDo.js'; 
-import WeatherCentral from './WeatherCentral.js'; 
-import RunCentral from './RunCentral.js'; 
+import ActivityDisplay from './ActivityDisplay.js'; 
 
 //Main Content on Page
 class PageContent extends Component {
@@ -10,13 +9,8 @@ class PageContent extends Component {
     return (
       <div className="PageContent">
         <div className="PageContentColumn">
-          <ToDo />
+          <ActivityDisplay/>
         </div>
-        <div className="PageContentColumn">
-          <WeatherCentral />
-          <RunCentral />
-        </div>
-        
       </div>
     );
   }
