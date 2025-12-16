@@ -8,11 +8,12 @@ p{
 }
 
 .defaultContainer {
-    width: 100%;
+    width: 500px;
     text-align: left;
     border:rgb(244, 127, 37) 4px solid;
     border-radius: 15px;
-    background:#dddedd
+    background:#dddedd;
+    margin:0 auto;
 }
 .PageContentColumn {
     width:100%;
@@ -86,7 +87,7 @@ p{
 
 .ActivityChoiceTitle{
     margin: 0;
-    font-size:20px;
+    font-size:16px;
     font-weight:700;
     align-self:center;
     width:40%;

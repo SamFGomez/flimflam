@@ -16,6 +16,33 @@ class ActivityDisplay extends Component {
     }
   }
 
+  convertSecondsToHHMMSS(seconds) {
+    if (!seconds || seconds < 0) return 'N/A';
+    
+    const hours = Math.floor(seconds / 3600);
+    const minutes = Math.floor((seconds % 3600) / 60);
+    const secs = seconds % 60;
+    
+    return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+  }
+
+
+  convertPaceToMinPerMile(speedMps) {
+    if (!speedMps || speedMps <= 0) return 'N/A';
+    
+    // Convert meters/second to miles/hour
+    const speedMph = speedMps * 2.23694;  // 1 m/s ≈ 2.23694 mph
+    
+    // Calculate minutes per mile
+    const paceMinPerMile = 60 / speedMph;
+    
+    // Format as mm:ss
+    const minutes = Math.floor(paceMinPerMile);
+    const seconds = Math.round((paceMinPerMile - minutes) * 60);
+    
+    return `${minutes}:${seconds.toString().padStart(2, '0')}`;
+  }
+
   getAllActivities(){
     var authDetails = JSON.parse(sessionStorage.getItem('stravaAuthDetails'));
     var url = 'http://localhost:5110/Activity/GetActivityList?' + new URLSearchParams({
@@ -26,11 +53,11 @@ class ActivityDisplay extends Component {
       var activities = data?.activityList?.map(x=>{return{
             id: x.id, 
             title: x.name, 
-            date: x.start_date_local, 
-            hr: x.average_heart_rate, 
-            pace: x.average_speed, 
-            milage: x.distance, 
-            duration: x.elapsed_time
+            date: new Date(x.start_date_local).toLocaleDateString(),
+            hr: x.average_heartrate ? x.average_heartrate.toFixed(0) : 'N/A', 
+            pace: this.convertPaceToMinPerMile(x.average_speed), 
+            milage: (x.distance / 1609.34).toFixed(1), // meters to miles
+            duration: this.convertSecondsToHHMMSS(x.elapsed_time)
       }});
       this.setState({activities: activities});
     })
