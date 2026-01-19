@@ -8,12 +8,14 @@ p{
 }
 
 .defaultContainer {
+    height:75vh;
     width: 500px;
     text-align: left;
     border:rgb(244, 127, 37) 4px solid;
     border-radius: 15px;
     background:#dddedd;
     margin:0 auto;
+    padding: 20px 0;
 }
 .PageContentColumn {
     width:100%;
@@ -42,7 +44,7 @@ p{
 
 .ActivityChoicesCointainer {
     margin-top: 20px;
-    max-height:630px;
+    max-height:90%;
     overflow-y:scroll;
     justify-content: center;
     text-align: center;
@@ -96,4 +98,107 @@ p{
 
 .ActivityChoiceDescription {
     display:flex;
+}
+
+.AppAuthorizationHeader {
+    font-size: 24px;
+    margin: 10px auto;
+    text-align: center;
+}
+
+.AppAuthorizationButtonsContainer {
+    display: flex;
+    flex-direction:column;
+    margin-top: 20px;
+    height: 400px;
+    justify-content: center;
+}
+
+.AppAuthorizationButtonsContainer button{
+    width:200px;
+    font-size: 18px;
+    margin: 10px auto;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 2px solid rgb(244, 127, 37);
+    background: #5a8963;
+    color: white;
+    cursor: pointer;
+}
+
+.AppAuthorizationButtonsContainer button:hover{
+    background: #3a5d40;
+    border: 3px solid rgb(244, 127, 37);
+}
+
+.ActivityDetailBackButtonImage {
+    height:30px;
+}
+
+.ActivityDetailBackButton {
+    background-color: unset;
+    border:none;
+    margin: 0 20px;
+}
+
+#TrackList {
+    margin: 20px auto;
+    max-height: 300px;
+    overflow-y: scroll;
+}
+
+.TrackItem {
+    border: 2px solid rgb(244, 127, 37);
+    border-radius: 10px;
+    width: 80%;
+    margin: 10px auto;
+    padding: 10px;
+    background: #5a8963;
+    color: white;
+    display:flex;
+    justify-content: space-between;
+}
+
+.TrackItem:hover, .TrackItemSelected {
+    border: 3px solid rgb(244, 127, 37);
+    background: #3a5d40;
+}
+
+.TrackTitle {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.TrackInfo {
+    text-align: left;
+}
+
+#CreatePlaylistButton {
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 10px;
+    border: 2px solid rgb(244, 127, 37);
+    background: #5a8963;
+    color: white;
+    cursor: pointer;
+}
+
+
+#CreatePlaylistButton:hover {
+    background: #3a5d40;
+    border: 3px solid rgb(244, 127, 37);
+}
+
+#SelectAllTracksButton {
+    padding: 10px 20px;
+    font-size: 18px;
+    background:none;
+    border: none;
+    color: #3a5d40;
+    cursor: pointer;
+}
+
+#SelectAllTracksButton:hover {
+    text-decoration: underline;
+    font-weight:bold;
 }

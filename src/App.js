@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './css/style.css';
 
 import PageHeader from './components/PageHeader.js';
@@ -8,7 +7,7 @@ function App() {
 
   return (
     <div>
-      <PageHeader name = "Sam Test" />
+      <PageHeader />
       <PageContent />
     </div>
   );
