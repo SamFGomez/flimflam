@@ -52,15 +52,6 @@ class ActivityDetail extends Component {
       };
     });
 
-    //temporary while no real data
-    mockData = songList.slice(0,20).map(x=>{
-      return {
-        id: x.track.id,
-        title: x.track.name,
-        artist: x.track.artists.map(x=>x.name).join(", ")
-      };
-    });
-
     this.setState({trackList: mockData.reverse()});
   }
 

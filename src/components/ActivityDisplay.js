@@ -52,7 +52,7 @@ class ActivityDisplay extends Component {
 
       var latestDate = new Date(data.recentSongs?.length > 0 ? new Date(Math.min(...data.recentSongs.map(song => new Date(song.played_at)))) : null);
 
-      var activities = data?.activityList?./*filter(x=>new Date(x.start_date_local.replace('Z', '')) > latestDate).*/map(x=>{return{
+      var activities = data?.activityList?.filter(x=>new Date(x.start_date_local.replace('Z', '')) > latestDate).map(x=>{return{
             id: x.id, 
             title: x.name, 
             date: x.start_date_local,
